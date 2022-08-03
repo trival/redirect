@@ -1,0 +1,14 @@
+{
+  "name": "tdz-redirect",
+  "version": "1.0.0",
+  "description": "redirect all incoming to a new url",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Thomas Gorny",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

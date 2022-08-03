@@ -1,0 +1,17 @@
+.idea
+.vscode
+node_modules
+.DS_Store
+*.log
+.env
+*.iml
+.swc
+
+dist
+**/__spec__/store_directory
+local_data
+.env.s3
+.env.local
+.env.test
+/coverage
+junit.xml
