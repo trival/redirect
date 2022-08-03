@@ -8,7 +8,7 @@ function main() {
 		throw new Error('no URL provided')
 	}
 
-	console.log(`Redirect starting to ${url}`)
+	console.log(`Redirect starting to ${url} on port ${port}`)
 
 	return http
 		.createServer(function (req, res) {
