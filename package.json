@@ -1,8 +1,9 @@
 {
-  "name": "tdz-redirect",
+  "name": "trival-redirect",
   "version": "1.0.0",
-  "description": "redirect all incoming to a new url",
+  "description": "redirect all incoming requests to a single url",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js"
   },
@@ -10,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.7.1"
+  },
+  "engines": {
+    "node": "18.*"
   }
 }

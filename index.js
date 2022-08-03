@@ -1,4 +1,4 @@
-var http = require('http')
+import { createServer } from 'http'
 
 const port = (process.env.PORT && parseInt(process.env.PORT)) || 5000
 const url = process.env.URL
@@ -10,20 +10,18 @@ function main() {
 
 	console.log(`Redirect starting to ${url} on port ${port}`)
 
-	return http
-		.createServer(function (req, res) {
-			if (req.method?.trim().toLocaleLowerCase() === 'get') {
-				res.statusCode = 302
-				res.setHeader('Content-Type', 'text/plain')
-				res.setHeader('Location', url)
-				res.end('Redirecting to ' + url)
-			} else {
-				res.statusCode = 404
-				res.setHeader('Content-Type', 'text/plain')
-				res.end('Not found')
-			}
-		})
-		.listen(port)
+	return createServer(function (req, res) {
+		if (req.method?.trim().toLocaleLowerCase() === 'get') {
+			res.statusCode = 302
+			res.setHeader('Content-Type', 'text/plain')
+			res.setHeader('Location', url)
+			res.end('Redirecting to ' + url)
+		} else {
+			res.statusCode = 404
+			res.setHeader('Content-Type', 'text/plain')
+			res.end('Not found')
+		}
+	}).listen(port)
 }
 
 main()
