@@ -23,3 +23,5 @@ function main() {
 		})
 		.listen(port)
 }
+
+main()
