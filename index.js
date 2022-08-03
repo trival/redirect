@@ -8,6 +8,8 @@ function main() {
 		throw new Error('no URL provided')
 	}
 
+	console.log(`Redirect starting to ${url}`)
+
 	return http
 		.createServer(function (req, res) {
 			if (req.method?.trim().toLocaleLowerCase() === 'get') {
