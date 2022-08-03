@@ -8,7 +8,10 @@
     "start": "node index.js"
   },
   "author": "Thomas Gorny",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/trival/redirect"
+  },
   "devDependencies": {
     "prettier": "^2.7.1"
   },
